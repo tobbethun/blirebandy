@@ -1,5 +1,14 @@
 .bandylist {
     text-align: left;
-    width: 300px;
+    width: 200px;
     padding: 10px;
+}
+.bandylist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.bandylist-remove {
+    font-size: 18px;
 }

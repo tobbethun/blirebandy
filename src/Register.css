@@ -2,17 +2,26 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 200px;
 }
 
 .register {
     font-size: 20px;
-    width: 200px;
+    width: 190px;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
 }
 .registerButton {
     background-color: white;
-    border: 3px solid grey;
+    background-color: #4c9206;
+    color: white;
+    font-size: 20px;
     margin: 10px 0 0;
     border-radius: 5px;
     padding: 10px;
-    width: 200px;
+    width: 100%;
+}
+.decline {
+    background-color: #a71b1b;
 }

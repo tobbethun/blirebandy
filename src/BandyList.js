@@ -7,10 +7,10 @@ class BandyList extends Component {
     const { participants, className } = this.props;
     return (
       <div className={`bandylist ${className}`}>
-        <h3>{className === "yes" ? "Kommer" : "Kommer inte"}</h3>
+        <h3>{participants.length -1 } {className === "yes" ? "Kommer" : "Kommer inte"}</h3>
         <ul>
           {participants.map((item, index) => (
-            <li key={index}>{item} {item === user && <span name={index} onClick={() => this.props.remove(item, className)}>Ta bort</span>}
+            <li key={index} className="bandylist-item">{item} {item === user && <span className="bandylist-remove" name={index} onClick={() => this.props.remove(item, className)}>Ta bort</span>}
             </li>
           ))}
         </ul>

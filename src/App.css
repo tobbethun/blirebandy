@@ -1,16 +1,28 @@
 .App {
   text-align: center;
+  background-image: url("sal.jpg");
+  background-size: cover;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 30vmin;
+  height: 10vmin;
   margin-bottom: 100px;
-  display: none;
+  position: absolute;
+  top: 80px;
+}
+
+.App-logo__left {
+  animation: App-logo-spin infinite 20s linear;
+  left: 50px;
+}
+
+.App-logo__right {
+  animation: App-logo-spin infinite 20s linear reverse;
+  right: 50px;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(0, 0, 0, .5);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,4 +48,13 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background: black;
+}
+
+.CE {
+  display: flex;
+  justify-content: center;
 }
