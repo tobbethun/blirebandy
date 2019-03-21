@@ -58,3 +58,14 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.too-many { 
+  color: #ffc642;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

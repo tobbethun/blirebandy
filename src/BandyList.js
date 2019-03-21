@@ -3,7 +3,7 @@ import "./Bandylist.css";
 
 class BandyList extends Component {
   render() {
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem("bandyPlayer");
     const { participants, className } = this.props;
     return (
       <div className={`bandylist ${className}`}>

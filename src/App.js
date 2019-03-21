@@ -39,7 +39,7 @@ class App extends Component {
       }
     });
     if(localStorage.getItem("monday") < nextMonday()) {
-      localStorage.removeItem("user");
+      localStorage.removeItem("bandyPlayer");
       localStorage.removeItem("monday");
     }
   }
@@ -54,7 +54,7 @@ class App extends Component {
     newData.push(this.state.name);
     const data = { [e.target.name]: newData };
     fb.update(data);
-    localStorage.setItem("user", this.state.name);
+    localStorage.setItem("bandyPlayer", this.state.name);
     localStorage.setItem("monday", nextMonday());
     this.setState({ name: "" });
   };
@@ -68,24 +68,31 @@ class App extends Component {
     }
     const data = { [name]: array };
     fb.update(data);
-    localStorage.removeItem("user"); 
+    localStorage.removeItem("bandyPlayer"); 
   };
 
   render() {
     const { yes, no } = this.state;
-    const user = localStorage.getItem("user");
+    console.log(yes);
+    const user = localStorage.getItem("bandyPlayer");
+    console.log('yes', yes && yes.length);
+    const tooMany = yes && yes.length > 10;
     return (    
       <div className="App">
         <header className="App-header">
           <h3>Bandy {nextMonday()} kl 20.00</h3>
-          {!user && (
+          {!user && !tooMany ? (
             <Register
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}
               name={this.state.name}
-            />
-          )}
-
+            /> 
+          ):
+          <div className="too-many">
+            <h4>Tyvärr är vi fulltaliga.</h4>
+            <h4>Ta en löprunda istället tjockis!</h4>
+          </div> 
+          }
           {yes && (
             <BandyList
               participants={yes}
