@@ -81,18 +81,19 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h3>Bandy {nextMonday()} kl 20.00</h3>
-          {!user && !tooMany ? (
+          {!user && !tooMany && (
             <Register
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}
               name={this.state.name}
             /> 
-          ):
+          )}
+          {tooMany && (
           <div className="too-many">
             <h4>Tyvärr är vi fulltaliga.</h4>
             <h4>Ta en löprunda istället tjockis!</h4>
           </div> 
-          }
+          )}
           {yes && (
             <BandyList
               participants={yes}
