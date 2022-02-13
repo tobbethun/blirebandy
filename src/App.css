@@ -13,21 +13,21 @@
 
 .App-logo__left {
   animation: App-logo-spin infinite 20s linear;
-  left: 50px;
+  left: 25px;
 }
 
 .App-logo__right {
   animation: App-logo-spin infinite 20s linear reverse;
-  right: 50px;
+  right: 25px;
 }
 
 .App-header {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
   padding: 20px;
 }
@@ -59,7 +59,7 @@ body {
   justify-content: center;
 }
 
-.too-many { 
+.too-many {
   color: #ffc642;
   animation: blink 2s linear infinite;
 }
